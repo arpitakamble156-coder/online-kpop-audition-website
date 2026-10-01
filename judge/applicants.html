@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Applicants | StarWave</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/judge.css"
+    >
+
+</head>
+
+<body>
+
+
+<nav class="navbar">
+
+    <a href="dashboard.html" class="logo">
+        StarWave
+    </a>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="assigned-auditions.html">
+            Assigned Auditions
+        </a>
+
+        <a
+            href="applicants.html"
+            class="active"
+        >
+            Applicants
+        </a>
+
+        <a href="evaluations.html">
+            Evaluations
+        </a>
+
+        <a href="results.html">
+            Results
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="page">
+
+    <div class="container">
+
+        <h1 class="page-title">
+            Applicants
+        </h1>
+
+        <p class="page-subtitle">
+            Review applicants assigned to you.
+        </p>
+
+
+        <div class="card">
+
+            <div class="form-group">
+
+                <input
+                    type="text"
+                    id="searchApplicant"
+                    placeholder="Search applicants..."
+                    onkeyup="searchTable('searchApplicant','applicantTable')"
+                >
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table id="applicantTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Applicant
+                            </th>
+
+                            <th>
+                                Audition
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+                                Ankita Kamble
+                            </td>
+
+                            <td>
+                                StarWave Global Audition
+                            </td>
+
+                            <td>
+                                Vocal
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <a
+                                    href="applicant-details.html"
+                                    class="btn btn-primary"
+                                >
+                                    View
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rahul Sharma
+                            </td>
+
+                            <td>
+                                Next Gen K-pop Audition
+                            </td>
+
+                            <td>
+                                Dance
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <a
+                                    href="applicant-details.html"
+                                    class="btn btn-primary"
+                                >
+                                    View
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Priya Patil
+                            </td>
+
+                            <td>
+                                Rising Star Audition
+                            </td>
+
+                            <td>
+                                Rap
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Evaluated
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <a
+                                    href="applicant-details.html"
+                                    class="btn btn-secondary"
+                                >
+                                    View
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 StarWave Audition. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="../assets/js/judge.js"></script>
+
+</body>
+</html>

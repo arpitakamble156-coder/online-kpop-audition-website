@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Results | StarWave Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">StarWave</div>
+
+        <p class="sidebar-title">MAIN</p>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="applicants.html">Applicants</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="categories.html">Categories</a>
+        <a href="agencies.html">Agencies</a>
+
+        <p class="sidebar-title">MANAGEMENT</p>
+
+        <a href="judges.html">Judges</a>
+        <a href="submissions.html">Submissions</a>
+        <a href="results.html" class="active">Results</a>
+        <a href="reports.html">Reports</a>
+        <a href="messages.html">Messages</a>
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <a href="profile.html">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1>Results</h1>
+                <p>Manage audition results</p>
+            </div>
+
+            <div class="profile-mini">
+
+                <div class="avatar">A</div>
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- STAT CARDS -->
+        <section class="grid">
+
+            <div class="stat card">
+
+                <h3>Total Results</h3>
+
+                <strong>96</strong>
+
+                <p>Evaluated applicants</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Selected</h3>
+
+                <strong>28</strong>
+
+                <p>Applicants selected</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Not Selected</h3>
+
+                <strong>68</strong>
+
+                <p>Applicants not selected</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS TABLE -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>Audition Results</h2>
+
+                    <p>
+                        View and manage applicant evaluation results.
+                    </p>
+
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="alert('Publish results feature will be connected to backend later.')">
+
+                    Publish Results
+
+                </button>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="form-group">
+
+                <label for="resultSearch">
+                    Search Results
+                </label>
+
+                <input
+                    type="text"
+                    id="resultSearch"
+                    placeholder="Search by applicant, audition or result..."
+                    onkeyup="filterTable('resultSearch', 'resultsTable')">
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div style="overflow-x:auto;">
+
+                <table id="resultsTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Applicant</th>
+
+                            <th>Audition</th>
+
+                            <th>Category</th>
+
+                            <th>Score</th>
+
+                            <th>Result</th>
+
+                            <th>Published</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- RESULT 1 -->
+
+                        <tr>
+
+                            <td>RES001</td>
+
+                            <td>
+                                <strong>Kim Hana</strong>
+                            </td>
+
+                            <td>
+                                2026 Global K-Pop Audition
+                            </td>
+
+                            <td>
+                                Vocal
+                            </td>
+
+                            <td>
+                                92/100
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Selected
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Yes
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing result details')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Editing result')">
+
+                                        Edit
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- RESULT 2 -->
+
+                        <tr>
+
+                            <td>RES002</td>
+
+                            <td>
+                                <strong>Park Minseo</strong>
+                            </td>
+
+                            <td>
+                                Summer K-Pop Audition
+                            </td>
+
+                            <td>
+                                Dance
+                            </td>
+
+                            <td>
+                                87/100
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Selected
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Yes
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing result details')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Editing result')">
+
+                                        Edit
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- RESULT 3 -->
+
+                        <tr>
+
+                            <td>RES003</td>
+
+                            <td>
+                                <strong>Lee Jisoo</strong>
+                            </td>
+
+                            <td>
+                                Online Global Audition
+                            </td>
+
+                            <td>
+                                Rap
+                            </td>
+
+                            <td>
+                                64/100
+                            </td>
+
+                            <td>
+
+                                <span class="badge red">
+                                    Not Selected
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Yes
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing result details')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Editing result')">
+
+                                        Edit
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- RESULT 4 -->
+
+                        <tr>
+
+                            <td>RES004</td>
+
+                            <td>
+                                <strong>Choi Yuna</strong>
+                            </td>
+
+                            <td>
+                                2026 Global K-Pop Audition
+                            </td>
+
+                            <td>
+                                Dance
+                            </td>
+
+                            <td>
+                                91/100
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Selected
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    No
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing result details')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Result published')">
+
+                                        Publish
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- RESULT 5 -->
+
+                        <tr>
+
+                            <td>RES005</td>
+
+                            <td>
+                                <strong>Jung Sora</strong>
+                            </td>
+
+                            <td>
+                                Summer K-Pop Audition
+                            </td>
+
+                            <td>
+                                Vocal
+                            </td>
+
+                            <td>
+                                58/100
+                            </td>
+
+                            <td>
+
+                                <span class="badge red">
+                                    Not Selected
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    No
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing result details')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Result published')">
+
+                                        Publish
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026 StarWave Audition. Admin Panel.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+</html>

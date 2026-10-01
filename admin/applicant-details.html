@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Applicant Details | StarWave Admin</title>
+
+    <link rel="stylesheet"
+          href="../assets/css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            STARWAVE
+        </div>
+
+        <div class="sidebar-title">
+            Administration
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="applicants.html" class="active">
+                Applicants
+            </a>
+
+            <a href="auditions.html">
+                Auditions
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="agencies.html">
+                Agencies
+            </a>
+
+            <a href="judges.html">
+                Judges
+            </a>
+
+            <a href="submissions.html">
+                Submissions
+            </a>
+
+            <a href="results.html">
+                Results
+            </a>
+
+            <a href="reports.html">
+                Reports
+            </a>
+
+            <a href="messages.html">
+                Messages
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-title">
+            Account
+        </div>
+
+        <a href="#" onclick="logout()">
+            Logout
+        </a>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <a
+            href="applicants.html"
+            class="back"
+        >
+            ← Back to Applicants
+        </a>
+
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+                    Applicant Details
+                </h1>
+
+                <p>
+                    Review applicant information and audition history.
+                </p>
+
+            </div>
+
+
+            <div class="actions">
+
+                <button
+                    class="btn btn-primary"
+                >
+                    Shortlist
+                </button>
+
+                <button
+                    class="btn btn-danger"
+                    data-confirm="Reject this applicant?"
+                >
+                    Reject
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <div class="card">
+
+            <div class="section-title">
+
+                <h2>
+                    Personal Information
+                </h2>
+
+                <span class="badge">
+                    Pending Review
+                </span>
+
+            </div>
+
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong>
+                        Kim Minji
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+                        minji@example.com
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span>
+                        Date of Birth
+                    </span>
+
+                    <strong>
+                        15 May 2005
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span>
+                        Country
+                    </span>
+
+                    <strong>
+                        South Korea
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span>
+                        Category
+                    </span>
+
+                    <strong>
+                        Vocal
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span>
+                        Experience
+                    </span>
+
+                    <strong>
+                        2 years
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- APPLICATION -->
+
+        <div class="card">
+
+            <div class="section-title">
+
+                <h2>
+                    Application
+                </h2>
+
+                <a
+                    href="submissions.html"
+                    class="btn btn-secondary"
+                >
+                    View Submission
+                </a>
+
+            </div>
+
+
+            <p style="
+                color:#aaa;
+                line-height:1.7;
+            ">
+
+                Applicant submitted a vocal audition for
+                the StarWave 2026 Global Audition.
+
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="card">
+
+            <div class="section-title">
+
+                <h2>
+                    Contact Information
+                </h2>
+
+            </div>
+
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong>
+                        +82 10 1234 5678
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span>
+                        City
+                    </span>
+
+                    <strong>
+                        Seoul
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <footer>
+            © 2026 StarWave Audition · Admin Panel
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+
+</html>

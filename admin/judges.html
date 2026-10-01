@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judges | StarWave Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">StarWave</div>
+
+        <p class="sidebar-title">MAIN</p>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="applicants.html">Applicants</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="categories.html">Categories</a>
+        <a href="agencies.html">Agencies</a>
+
+        <p class="sidebar-title">MANAGEMENT</p>
+
+        <a href="judges.html" class="active">Judges</a>
+        <a href="submissions.html">Submissions</a>
+        <a href="results.html">Results</a>
+        <a href="reports.html">Reports</a>
+        <a href="messages.html">Messages</a>
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <a href="profile.html">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1>Judges</h1>
+                <p>Manage audition judges and evaluators</p>
+            </div>
+
+            <div class="profile-mini">
+                <div class="avatar">A</div>
+                <span>Admin</span>
+            </div>
+
+        </div>
+
+
+        <!-- JUDGES SECTION -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Judge Management</h2>
+                    <p>View and manage registered judges.</p>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="alert('Add judge form will be connected to backend later.')">
+                    + Add Judge
+                </button>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="form-group">
+                <label for="judgeSearch">Search Judges</label>
+
+                <input
+                    type="text"
+                    id="judgeSearch"
+                    placeholder="Search by name, email or specialization..."
+                    onkeyup="filterTable('judgeSearch', 'judgesTable')">
+            </div>
+
+
+            <!-- TABLE -->
+            <div style="overflow-x:auto;">
+
+                <table id="judgesTable">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Judge</th>
+                            <th>Email</th>
+                            <th>Specialization</th>
+                            <th>Assigned Auditions</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>J001</td>
+
+                            <td>
+                                <strong>Kim Min-Jae</strong>
+                            </td>
+
+                            <td>
+                                minjae@starwave.com
+                            </td>
+
+                            <td>
+                                Vocal
+                            </td>
+
+                            <td>
+                                4
+                            </td>
+
+                            <td>
+                                <span class="badge green">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing Kim Min-Jae')">
+                                        View
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Edit judge')">
+                                        Edit
+                                    </button>
+
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>J002</td>
+
+                            <td>
+                                <strong>Park Soo-Yeon</strong>
+                            </td>
+
+                            <td>
+                                sooyeon@starwave.com
+                            </td>
+
+                            <td>
+                                Dance
+                            </td>
+
+                            <td>
+                                6
+                            </td>
+
+                            <td>
+                                <span class="badge green">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing Park Soo-Yeon')">
+                                        View
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Edit judge')">
+                                        Edit
+                                    </button>
+
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>J003</td>
+
+                            <td>
+                                <strong>Lee Ji-Hoon</strong>
+                            </td>
+
+                            <td>
+                                jihoon@starwave.com
+                            </td>
+
+                            <td>
+                                Rap
+                            </td>
+
+                            <td>
+                                3
+                            </td>
+
+                            <td>
+                                <span class="badge yellow">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing Lee Ji-Hoon')">
+                                        View
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Edit judge')">
+                                        Edit
+                                    </button>
+
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>J004</td>
+
+                            <td>
+                                <strong>Choi Hana</strong>
+                            </td>
+
+                            <td>
+                                hana@starwave.com
+                            </td>
+
+                            <td>
+                                Performance
+                            </td>
+
+                            <td>
+                                5
+                            </td>
+
+                            <td>
+                                <span class="badge green">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing Choi Hana')">
+                                        View
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Edit judge')">
+                                        Edit
+                                    </button>
+
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+        <section class="grid">
+
+            <div class="stat card">
+                <h3>Total Judges</h3>
+                <strong>24</strong>
+                <p>Registered judges</p>
+            </div>
+
+            <div class="stat card">
+                <h3>Active Judges</h3>
+                <strong>21</strong>
+                <p>Currently active</p>
+            </div>
+
+            <div class="stat card">
+                <h3>Pending</h3>
+                <strong>3</strong>
+                <p>Awaiting approval</p>
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            © 2026 StarWave Audition. Admin Panel.
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+</html>

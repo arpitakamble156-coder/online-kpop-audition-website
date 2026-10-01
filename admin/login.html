@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | StarWave</title>
+
+    <link rel="stylesheet"
+          href="../assets/css/admin.css">
+
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-box">
+
+        <div class="brand">
+            STARWAVE
+        </div>
+
+        <h1>Admin Login</h1>
+
+        <p>
+            Sign in to manage auditions and applicants.
+        </p>
+
+        <form onsubmit="loginAdmin(event)">
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="admin@starwave.com"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+            </div>
+
+            <label style="
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                gap:8px;
+                margin:12px 0 20px;
+            ">
+
+                <input
+                    type="checkbox"
+                    style="width:auto"
+                >
+
+                Remember me
+
+            </label>
+
+            <button
+                type="submit"
+                class="btn btn-primary full-btn"
+            >
+                Login
+            </button>
+
+        </form>
+
+        
+
+    </div>
+
+</div>
+
+<script>
+
+function loginAdmin(event) {
+
+    event.preventDefault();
+
+    window.location.href = "dashboard.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

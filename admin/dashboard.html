@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | StarWave Admin</title>
+
+<link rel="stylesheet"
+      href="../assets/css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+<aside class="sidebar">
+
+    <div class="brand">
+        STARWAVE
+    </div>
+
+    <div class="sidebar-title">
+        Administration
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html" class="active">
+            Dashboard
+        </a>
+
+        <a href="applicants.html">
+            Applicants
+        </a>
+
+        <a href="auditions.html">
+            Auditions
+        </a>
+
+        <a href="categories.html">
+            Categories
+        </a>
+
+        <a href="agencies.html">
+            Agencies
+        </a>
+
+        <a href="judges.html">
+            Judges
+        </a>
+
+        <a href="submissions.html">
+            Submissions
+        </a>
+
+        <a href="results.html">
+            Results
+        </a>
+
+        <a href="reports.html">
+            Reports
+        </a>
+
+        <a href="messages.html">
+            Messages
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </nav>
+
+    <div class="sidebar-title">
+        Account
+    </div>
+
+    <a href="#" onclick="logout()">
+        Logout
+    </a>
+
+</aside>
+
+
+<main class="main">
+
+<div class="topbar">
+
+    <div>
+
+        <h1>
+            Dashboard
+        </h1>
+
+        <p>
+            Overview of your audition platform.
+        </p>
+
+    </div>
+
+    <div class="profile-mini">
+
+        <div class="avatar">
+            A
+        </div>
+
+        <span>
+            Administrator
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="grid">
+
+    <div class="card stat">
+
+        <h3>
+            Total Applicants
+        </h3>
+
+        <strong>
+            1,248
+        </strong>
+
+        <small>
+            +12% this month
+        </small>
+
+    </div>
+
+
+    <div class="card stat">
+
+        <h3>
+            Active Auditions
+        </h3>
+
+        <strong>
+            08
+        </strong>
+
+        <small>
+            3 closing soon
+        </small>
+
+    </div>
+
+
+    <div class="card stat">
+
+        <h3>
+            Submissions
+        </h3>
+
+        <strong>
+            936
+        </strong>
+
+        <small>
+            +8% this month
+        </small>
+
+    </div>
+
+
+    <div class="card stat">
+
+        <h3>
+            Pending Reviews
+        </h3>
+
+        <strong>
+            142
+        </strong>
+
+        <small>
+            Needs attention
+        </small>
+
+    </div>
+
+</div>
+
+
+<div class="grid-2">
+
+
+<div class="card">
+
+    <div class="section-title">
+
+        <h2>
+            Application Activity
+        </h2>
+
+        <span class="badge">
+            2026
+        </span>
+
+    </div>
+
+
+    <div class="chart">
+
+        <div class="bar" style="height:45%"></div>
+
+        <div class="bar" style="height:60%"></div>
+
+        <div class="bar" style="height:52%"></div>
+
+        <div class="bar" style="height:75%"></div>
+
+        <div class="bar" style="height:65%"></div>
+
+        <div class="bar" style="height:90%"></div>
+
+        <div class="bar" style="height:78%"></div>
+
+    </div>
+
+
+    <div class="bar-labels">
+
+        <span>Mar</span>
+        <span>Apr</span>
+        <span>May</span>
+        <span>Jun</span>
+        <span>Jul</span>
+        <span>Aug</span>
+        <span>Sep</span>
+
+    </div>
+
+</div>
+
+
+<div class="card">
+
+    <div class="section-title">
+
+        <h2>
+            Recent Applications
+        </h2>
+
+        <a
+            class="btn btn-secondary"
+            href="applicants.html"
+        >
+            View All
+        </a>
+
+    </div>
+
+
+    <div class="message">
+
+        <strong>
+            Kim Minji
+        </strong>
+
+        <p>
+            Vocal · Seoul ·
+            <span class="badge">
+                Pending
+            </span>
+        </p>
+
+    </div>
+
+
+    <div class="message">
+
+        <strong>
+            Park Hana
+        </strong>
+
+        <p>
+            Dance · Busan ·
+            <span class="badge green">
+                Reviewed
+            </span>
+        </p>
+
+    </div>
+
+
+    <div class="message">
+
+        <strong>
+            Lee Jisoo
+        </strong>
+
+        <p>
+            Rap · Incheon ·
+            <span class="badge">
+                Pending
+            </span>
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<footer>
+    © 2026 StarWave Audition · Admin Panel
+</footer>
+
+</main>
+
+</div>
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+
+</html>

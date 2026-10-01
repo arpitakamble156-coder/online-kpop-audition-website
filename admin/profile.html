@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Profile | StarWave</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">StarWave</div>
+
+        <p class="sidebar-title">MAIN</p>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="applicants.html">Applicants</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="categories.html">Categories</a>
+        <a href="agencies.html">Agencies</a>
+
+        <p class="sidebar-title">MANAGEMENT</p>
+
+        <a href="judges.html">Judges</a>
+        <a href="submissions.html">Submissions</a>
+        <a href="results.html">Results</a>
+        <a href="reports.html">Reports</a>
+        <a href="messages.html">Messages</a>
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <a href="profile.html" class="active">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1>Admin Profile</h1>
+                <p>Manage your administrator account</p>
+            </div>
+
+            <div class="profile-mini">
+
+                <div class="avatar">A</div>
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE CARD -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Profile Information</h2>
+                    <p>Update your personal and account information.</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <!-- FIRST NAME -->
+                <div class="form-group">
+
+                    <label for="firstName">
+                        First Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        value="StarWave">
+
+                </div>
+
+
+                <!-- LAST NAME -->
+                <div class="form-group">
+
+                    <label for="lastName">
+                        Last Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        value="Admin">
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        value="admin@starwave.com">
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        value="+82 10 1234 5678">
+
+                </div>
+
+
+                <!-- ROLE -->
+                <div class="form-group">
+
+                    <label for="role">
+                        Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="role"
+                        value="Administrator"
+                        readonly>
+
+                </div>
+
+
+                <!-- USERNAME -->
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        value="admin"
+                        readonly>
+
+                </div>
+
+
+                <!-- BIO -->
+                <div class="form-group full">
+
+                    <label for="bio">
+                        Bio
+                    </label>
+
+                    <textarea
+                        id="bio"
+                        rows="5"
+                        placeholder="Write something about the administrator...">StarWave Audition administrator.</textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="actions">
+
+                <button
+                    class="btn btn-primary"
+                    onclick="saveProfile()">
+
+                    Save Changes
+
+                </button>
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="resetProfile()">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHANGE PASSWORD -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Change Password</h2>
+                    <p>Update your administrator account password.</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="currentPassword">
+                        Current Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        placeholder="Enter current password">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="newPassword">
+                        New Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        placeholder="Enter new password">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm New Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm new password">
+
+                </div>
+
+            </div>
+
+
+            <div class="actions">
+
+                <button
+                    class="btn btn-primary"
+                    onclick="changePassword()">
+
+                    Update Password
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACCOUNT INFORMATION -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Account Information</h2>
+                    <p>Basic administrator account details.</p>
+                </div>
+
+            </div>
+
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+
+                    <strong>Account ID</strong>
+
+                    <span>ADM001</span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <strong>Account Status</strong>
+
+                    <span class="badge green">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <strong>Created On</strong>
+
+                    <span>
+                        01 January 2026
+                    </span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <strong>Last Login</strong>
+
+                    <span>
+                        29 September 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            © 2026 StarWave Audition. Admin Panel.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+<script>
+
+    function saveProfile() {
+
+        alert("Profile saved successfully!");
+
+    }
+
+
+    function resetProfile() {
+
+        document.getElementById("firstName").value = "StarWave";
+        document.getElementById("lastName").value = "Admin";
+        document.getElementById("email").value = "admin@starwave.com";
+        document.getElementById("phone").value = "+82 10 1234 5678";
+        document.getElementById("bio").value =
+            "StarWave Audition administrator.";
+
+    }
+
+
+    function changePassword() {
+
+        const currentPassword =
+            document.getElementById("currentPassword").value;
+
+        const newPassword =
+            document.getElementById("newPassword").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+
+        if (!currentPassword || !newPassword || !confirmPassword) {
+
+            alert("Please fill in all password fields.");
+
+            return;
+
+        }
+
+
+        if (newPassword !== confirmPassword) {
+
+            alert("New passwords do not match.");
+
+            return;
+
+        }
+
+
+        alert("Password updated successfully!");
+
+    }
+
+</script>
+
+</body>
+</html>

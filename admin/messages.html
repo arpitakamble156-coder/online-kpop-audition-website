@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Messages | StarWave Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">StarWave</div>
+
+        <p class="sidebar-title">MAIN</p>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="applicants.html">Applicants</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="categories.html">Categories</a>
+        <a href="agencies.html">Agencies</a>
+
+        <p class="sidebar-title">MANAGEMENT</p>
+
+        <a href="judges.html">Judges</a>
+        <a href="submissions.html">Submissions</a>
+        <a href="results.html">Results</a>
+        <a href="reports.html">Reports</a>
+        <a href="messages.html" class="active">Messages</a>
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <a href="profile.html">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1>Messages</h1>
+                <p>Manage applicant and system messages</p>
+            </div>
+
+            <div class="profile-mini">
+
+                <div class="avatar">A</div>
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE STATS -->
+        <section class="grid">
+
+            <div class="stat card">
+
+                <h3>Total Messages</h3>
+
+                <strong>84</strong>
+
+                <p>All received messages</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Unread</h3>
+
+                <strong>12</strong>
+
+                <p>Messages waiting for response</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Replied</h3>
+
+                <strong>72</strong>
+
+                <p>Messages already answered</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGES -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Inbox</h2>
+                    <p>View messages from applicants and users.</p>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="alert('New message form will be connected to backend later.')">
+
+                    + New Message
+
+                </button>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="form-group">
+
+                <label for="messageSearch">
+                    Search Messages
+                </label>
+
+                <input
+                    type="text"
+                    id="messageSearch"
+                    placeholder="Search by sender, subject or message..."
+                    onkeyup="filterTable('messageSearch', 'messagesTable')">
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div style="overflow-x:auto;">
+
+                <table id="messagesTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Sender</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- MESSAGE 1 -->
+
+                        <tr>
+
+                            <td>MSG001</td>
+
+                            <td>
+                                <strong>Kim Hana</strong>
+                            </td>
+
+                            <td>
+                                Audition Result
+                            </td>
+
+                            <td>
+                                I would like to know when the results will be announced.
+                            </td>
+
+                            <td>
+                                28 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Unread
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Opening message from Kim Hana')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Reply form will be connected later.')">
+
+                                        Reply
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- MESSAGE 2 -->
+
+                        <tr>
+
+                            <td>MSG002</td>
+
+                            <td>
+                                <strong>Park Minseo</strong>
+                            </td>
+
+                            <td>
+                                Submission Issue
+                            </td>
+
+                            <td>
+                                My audition video upload was interrupted.
+                            </td>
+
+                            <td>
+                                27 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Unread
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Opening message from Park Minseo')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Reply form will be connected later.')">
+
+                                        Reply
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- MESSAGE 3 -->
+
+                        <tr>
+
+                            <td>MSG003</td>
+
+                            <td>
+                                <strong>Lee Jisoo</strong>
+                            </td>
+
+                            <td>
+                                Application Question
+                            </td>
+
+                            <td>
+                                Can I apply for more than one audition?
+                            </td>
+
+                            <td>
+                                26 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Replied
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Opening message from Lee Jisoo')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Opening previous reply')">
+
+                                        Reply
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- MESSAGE 4 -->
+
+                        <tr>
+
+                            <td>MSG004</td>
+
+                            <td>
+                                <strong>Choi Yuna</strong>
+                            </td>
+
+                            <td>
+                                Profile Update
+                            </td>
+
+                            <td>
+                                I need help updating my profile information.
+                            </td>
+
+                            <td>
+                                25 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Replied
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Opening message from Choi Yuna')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Opening previous reply')">
+
+                                        Reply
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- MESSAGE 5 -->
+
+                        <tr>
+
+                            <td>MSG005</td>
+
+                            <td>
+                                <strong>Jung Sora</strong>
+                            </td>
+
+                            <td>
+                                General Question
+                            </td>
+
+                            <td>
+                                Is there an age limit for the upcoming audition?
+                            </td>
+
+                            <td>
+                                24 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Unread
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Opening message from Jung Sora')">
+
+                                        View
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Reply form will be connected later.')">
+
+                                        Reply
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026 StarWave Audition. Admin Panel.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+</html>

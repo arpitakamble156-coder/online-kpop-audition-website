@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Results | StarWave Audition</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/user.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <a href="dashboard.html" class="logo">
+        StarWave
+    </a>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="auditions.html">
+            Auditions
+        </a>
+
+        <a href="my-applications.html">
+            My Applications
+        </a>
+
+        <a href="submissions.html">
+            Submissions
+        </a>
+
+        <a href="results.html" class="active">
+            Results
+        </a>
+
+        <a href="notifications.html">
+            Notifications
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="page">
+
+    <div class="container">
+
+        <h1 class="page-title">
+            My Results
+        </h1>
+
+        <p class="page-subtitle">
+            Check the results of your completed auditions.
+        </p>
+
+
+        <div class="card">
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Audition
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Result
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Details
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+                                Rising Star Audition
+                            </td>
+
+                            <td>
+                                Rap
+                            </td>
+
+                            <td>
+
+                                <span class="badge red">
+                                    Not Selected
+                                </span>
+
+                            </td>
+
+                            <td>
+                                25 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    onclick="showMessage('Your audition was reviewed by the evaluation team.')"
+                                >
+                                    View
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Next Gen K-pop Audition
+                            </td>
+
+                            <td>
+                                Dance
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Under Review
+                                </span>
+
+                            </td>
+
+                            <td>
+                                -
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    onclick="showMessage('The result is not available yet.')"
+                                >
+                                    View
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+    <p>© 2026 StarWave Audition. All Rights Reserved.</p>
+</footer>
+
+
+<script src="../assets/js/user.js"></script>
+
+</body>
+</html>
