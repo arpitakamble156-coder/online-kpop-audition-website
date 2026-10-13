@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submissions | StarWave Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">StarWave</div>
+
+        <p class="sidebar-title">MAIN</p>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="applicants.html">Applicants</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="categories.html">Categories</a>
+        <a href="agencies.html">Agencies</a>
+
+        <p class="sidebar-title">MANAGEMENT</p>
+
+        <a href="judges.html">Judges</a>
+        <a href="submissions.html" class="active">Submissions</a>
+        <a href="results.html">Results</a>
+        <a href="reports.html">Reports</a>
+        <a href="messages.html">Messages</a>
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <a href="profile.html">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1>Submissions</h1>
+                <p>Manage audition submissions</p>
+            </div>
+
+            <div class="profile-mini">
+
+                <div class="avatar">A</div>
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- STAT CARDS -->
+        <section class="grid">
+
+            <div class="stat card">
+
+                <h3>Total Submissions</h3>
+
+                <strong>156</strong>
+
+                <p>All submitted auditions</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Pending Review</h3>
+
+                <strong>42</strong>
+
+                <p>Waiting for evaluation</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Reviewed</h3>
+
+                <strong>114</strong>
+
+                <p>Already evaluated</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBMISSIONS TABLE -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>All Submissions</h2>
+
+                    <p>
+                        View and manage applicant audition submissions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="form-group">
+
+                <label for="submissionSearch">
+                    Search Submissions
+                </label>
+
+                <input
+                    type="text"
+                    id="submissionSearch"
+                    placeholder="Search by applicant, audition or category..."
+                    onkeyup="filterTable('submissionSearch', 'submissionsTable')">
+
+            </div>
+
+
+            <!-- TABLE -->
+            <div style="overflow-x:auto;">
+
+                <table id="submissionsTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Applicant</th>
+
+                            <th>Audition</th>
+
+                            <th>Category</th>
+
+                            <th>Submitted On</th>
+
+                            <th>File</th>
+
+                            <th>Status</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- SUBMISSION 1 -->
+
+                        <tr>
+
+                            <td>SUB001</td>
+
+                            <td>
+                                <strong>Kim Hana</strong>
+                            </td>
+
+                            <td>
+                                2026 Global K-Pop Audition
+                            </td>
+
+                            <td>
+                                Vocal
+                            </td>
+
+                            <td>
+                                20 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    onclick="alert('Opening submission video...')">
+
+                                    View File
+
+                                </button>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Submission approved')">
+
+                                        Approve
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-danger"
+                                        onclick="confirm('Reject this submission?')">
+
+                                        Reject
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUBMISSION 2 -->
+
+                        <tr>
+
+                            <td>SUB002</td>
+
+                            <td>
+                                <strong>Park Minseo</strong>
+                            </td>
+
+                            <td>
+                                Summer K-Pop Audition
+                            </td>
+
+                            <td>
+                                Dance
+                            </td>
+
+                            <td>
+                                18 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    onclick="alert('Opening submission video...')">
+
+                                    View File
+
+                                </button>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Reviewed
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing submission details')">
+
+                                        View
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUBMISSION 3 -->
+
+                        <tr>
+
+                            <td>SUB003</td>
+
+                            <td>
+                                <strong>Lee Jisoo</strong>
+                            </td>
+
+                            <td>
+                                Online Global Audition
+                            </td>
+
+                            <td>
+                                Rap
+                            </td>
+
+                            <td>
+                                15 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    onclick="alert('Opening submission video...')">
+
+                                    View File
+
+                                </button>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge yellow">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-primary"
+                                        onclick="alert('Submission approved')">
+
+                                        Approve
+
+                                    </button>
+
+                                    <button
+                                        class="btn btn-danger"
+                                        onclick="confirm('Reject this submission?')">
+
+                                        Reject
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUBMISSION 4 -->
+
+                        <tr>
+
+                            <td>SUB004</td>
+
+                            <td>
+                                <strong>Choi Yuna</strong>
+                            </td>
+
+                            <td>
+                                2026 Global K-Pop Audition
+                            </td>
+
+                            <td>
+                                Dance
+                            </td>
+
+                            <td>
+                                12 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    onclick="alert('Opening submission video...')">
+
+                                    View File
+
+                                </button>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge green">
+                                    Reviewed
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing submission details')">
+
+                                        View
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- SUBMISSION 5 -->
+
+                        <tr>
+
+                            <td>SUB005</td>
+
+                            <td>
+                                <strong>Jung Sora</strong>
+                            </td>
+
+                            <td>
+                                Summer K-Pop Audition
+                            </td>
+
+                            <td>
+                                Vocal
+                            </td>
+
+                            <td>
+                                10 Sep 2026
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="btn btn-secondary"
+                                    onclick="alert('Opening submission video...')">
+
+                                    View File
+
+                                </button>
+
+                            </td>
+
+                            <td>
+
+                                <span class="badge red">
+                                    Rejected
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="actions">
+
+                                    <button
+                                        class="btn btn-secondary"
+                                        onclick="alert('Viewing submission details')">
+
+                                        View
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026 StarWave Audition. Admin Panel.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+</html>

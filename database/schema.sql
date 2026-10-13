@@ -1,0 +1,122 @@
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(30),
+    date_of_birth DATE,
+    gender VARCHAR(20),
+    country VARCHAR(100),
+    profile_image VARCHAR(255),
+    role VARCHAR(20) DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- AGENCIES
+CREATE TABLE IF NOT EXISTS agencies (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    description TEXT,
+    logo VARCHAR(255),
+    website VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- CATEGORIES
+CREATE TABLE IF NOT EXISTS categories (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- AUDITIONS
+CREATE TABLE IF NOT EXISTS auditions (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    description TEXT,
+    agency_id INTEGER REFERENCES agencies(id) ON DELETE SET NULL,
+    category_id INTEGER REFERENCES categories(id) ON DELETE SET NULL,
+    requirements TEXT,
+    deadline DATE,
+    status VARCHAR(30) DEFAULT 'open',
+    image VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- APPLICATIONS
+CREATE TABLE IF NOT EXISTS applications (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    audition_id INTEGER NOT NULL REFERENCES auditions(id) ON DELETE CASCADE,
+    status VARCHAR(30) DEFAULT 'pending',
+    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- SUBMISSIONS
+CREATE TABLE IF NOT EXISTS submissions (
+    id SERIAL PRIMARY KEY,
+    application_id INTEGER NOT NULL REFERENCES applications(id) ON DELETE CASCADE,
+    submission_type VARCHAR(30),
+    file_url VARCHAR(500),
+    description TEXT,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- JUDGES
+CREATE TABLE IF NOT EXISTS judges (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER UNIQUE NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    agency_id INTEGER REFERENCES agencies(id) ON DELETE SET NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- EVALUATIONS
+CREATE TABLE IF NOT EXISTS evaluations (
+    id SERIAL PRIMARY KEY,
+    submission_id INTEGER NOT NULL REFERENCES submissions(id) ON DELETE CASCADE,
+    judge_id INTEGER NOT NULL REFERENCES judges(id) ON DELETE CASCADE,
+    score DECIMAL(5,2),
+    comments TEXT,
+    evaluated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- RESULTS
+CREATE TABLE IF NOT EXISTS results (
+    id SERIAL PRIMARY KEY,
+    application_id INTEGER NOT NULL REFERENCES applications(id) ON DELETE CASCADE,
+    result VARCHAR(30) NOT NULL,
+    remarks TEXT,
+    published_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- NOTIFICATIONS
+CREATE TABLE IF NOT EXISTS notifications (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    title VARCHAR(200) NOT NULL,
+    message TEXT NOT NULL,
+    is_read BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- CONTACT MESSAGES
+CREATE TABLE IF NOT EXISTS contact_messages (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    subject VARCHAR(200),
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

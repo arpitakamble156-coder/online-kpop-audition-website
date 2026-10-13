@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencies | StarWave Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <aside class="sidebar">
+        <div class="brand">StarWave</div>
+
+        <p class="sidebar-title">MAIN</p>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="applicants.html">Applicants</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="categories.html">Categories</a>
+        <a href="agencies.html" class="active">Agencies</a>
+
+        <p class="sidebar-title">MANAGEMENT</p>
+
+        <a href="judges.html">Judges</a>
+        <a href="submissions.html">Submissions</a>
+        <a href="results.html">Results</a>
+        <a href="reports.html">Reports</a>
+        <a href="messages.html">Messages</a>
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <a href="profile.html">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+    </aside>
+
+    <main class="main">
+
+        <div class="topbar">
+            <div>
+                <h1>Agencies</h1>
+                <p>Manage entertainment agencies</p>
+            </div>
+
+            <div class="profile-mini">
+                <div class="avatar">A</div>
+                <span>Admin</span>
+            </div>
+        </div>
+
+        <section class="card">
+
+            <div class="section-title">
+                <h2>Registered Agencies</h2>
+
+                <button class="btn btn-primary"
+                        onclick="alert('Add agency form will be connected to backend later.')">
+                    + Add Agency
+                </button>
+            </div>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h3>StarWave Entertainment</h3>
+                    <p>Seoul, South Korea</p>
+                    <p>Auditions: 12</p>
+
+                    <br>
+                    <span class="badge green">Active</span>
+
+                    <div class="actions">
+                        <button class="btn btn-secondary"
+                                onclick="alert('Edit StarWave Entertainment')">
+                            Edit
+                        </button>
+
+                        <button class="btn btn-danger"
+                                onclick="confirm('Delete this agency?')">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Dream Entertainment</h3>
+                    <p>Seoul, South Korea</p>
+                    <p>Auditions: 8</p>
+
+                    <br>
+                    <span class="badge green">Active</span>
+
+                    <div class="actions">
+                        <button class="btn btn-secondary"
+                                onclick="alert('Edit Dream Entertainment')">
+                            Edit
+                        </button>
+
+                        <button class="btn btn-danger"
+                                onclick="confirm('Delete this agency?')">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>NextBeat Entertainment</h3>
+                    <p>Busan, South Korea</p>
+                    <p>Auditions: 5</p>
+
+                    <br>
+                    <span class="badge yellow">Pending</span>
+
+                    <div class="actions">
+                        <button class="btn btn-secondary"
+                                onclick="alert('Edit NextBeat Entertainment')">
+                            Edit
+                        </button>
+
+                        <button class="btn btn-danger"
+                                onclick="confirm('Delete this agency?')">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            © 2026 StarWave Audition. Admin Panel.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+</html>

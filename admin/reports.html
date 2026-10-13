@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | StarWave Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">StarWave</div>
+
+        <p class="sidebar-title">MAIN</p>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="applicants.html">Applicants</a>
+        <a href="auditions.html">Auditions</a>
+        <a href="categories.html">Categories</a>
+        <a href="agencies.html">Agencies</a>
+
+        <p class="sidebar-title">MANAGEMENT</p>
+
+        <a href="judges.html">Judges</a>
+        <a href="submissions.html">Submissions</a>
+        <a href="results.html">Results</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="messages.html">Messages</a>
+
+        <p class="sidebar-title">ACCOUNT</p>
+
+        <a href="profile.html">Profile</a>
+        <a href="login.html" onclick="logout()">Logout</a>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1>Reports</h1>
+                <p>View audition and application reports</p>
+            </div>
+
+            <div class="profile-mini">
+
+                <div class="avatar">A</div>
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- REPORT SUMMARY -->
+        <section class="grid">
+
+            <div class="stat card">
+
+                <h3>Total Applicants</h3>
+
+                <strong>248</strong>
+
+                <p>Registered applicants</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Total Submissions</h3>
+
+                <strong>156</strong>
+
+                <p>Audition submissions</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Selected</h3>
+
+                <strong>28</strong>
+
+                <p>Applicants selected</p>
+
+            </div>
+
+
+            <div class="stat card">
+
+                <h3>Selection Rate</h3>
+
+                <strong>18%</strong>
+
+                <p>Based on reviewed submissions</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- APPLICATION REPORT -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Application Report</h2>
+                    <p>Application statistics by month</p>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="alert('Report download will be connected to backend later.')">
+
+                    Download Report
+
+                </button>
+
+            </div>
+
+
+            <div class="chart">
+
+                <div class="bar" style="height: 45%;">
+                    <span>Jan</span>
+                </div>
+
+                <div class="bar" style="height: 60%;">
+                    <span>Feb</span>
+                </div>
+
+                <div class="bar" style="height: 50%;">
+                    <span>Mar</span>
+                </div>
+
+                <div class="bar" style="height: 75%;">
+                    <span>Apr</span>
+                </div>
+
+                <div class="bar" style="height: 65%;">
+                    <span>May</span>
+                </div>
+
+                <div class="bar" style="height: 85%;">
+                    <span>Jun</span>
+                </div>
+
+                <div class="bar" style="height: 70%;">
+                    <span>Jul</span>
+                </div>
+
+                <div class="bar" style="height: 95%;">
+                    <span>Aug</span>
+                </div>
+
+                <div class="bar" style="height: 80%;">
+                    <span>Sep</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORY REPORT -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Category Report</h2>
+                    <p>Applications by audition category</p>
+                </div>
+
+            </div>
+
+
+            <div style="overflow-x:auto;">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Category</th>
+                            <th>Applications</th>
+                            <th>Submissions</th>
+                            <th>Selected</th>
+                            <th>Selection Rate</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>Vocal</strong>
+                            </td>
+
+                            <td>86</td>
+
+                            <td>52</td>
+
+                            <td>10</td>
+
+                            <td>19%</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Dance</strong>
+                            </td>
+
+                            <td>92</td>
+
+                            <td>61</td>
+
+                            <td>12</td>
+
+                            <td>20%</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Rap</strong>
+                            </td>
+
+                            <td>38</td>
+
+                            <td>25</td>
+
+                            <td>4</td>
+
+                            <td>16%</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Model</strong>
+                            </td>
+
+                            <td>18</td>
+
+                            <td>10</td>
+
+                            <td>2</td>
+
+                            <td>20%</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Acting</strong>
+                            </td>
+
+                            <td>14</td>
+
+                            <td>8</td>
+
+                            <td>0</td>
+
+                            <td>0%</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- AUDITION REPORT -->
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Audition Report</h2>
+                    <p>Performance of current auditions</p>
+                </div>
+
+            </div>
+
+
+            <div style="overflow-x:auto;">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Audition</th>
+                            <th>Applications</th>
+                            <th>Submissions</th>
+                            <th>Reviewed</th>
+                            <th>Selected</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <strong>2026 Global K-Pop Audition</strong>
+                            </td>
+
+                            <td>124</td>
+
+                            <td>82</td>
+
+                            <td>61</td>
+
+                            <td>
+                                <span class="badge green">
+                                    16
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Summer K-Pop Audition</strong>
+                            </td>
+
+                            <td>76</td>
+
+                            <td>48</td>
+
+                            <td>35</td>
+
+                            <td>
+                                <span class="badge green">
+                                    9
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>Online Global Audition</strong>
+                            </td>
+
+                            <td>48</td>
+
+                            <td>26</td>
+
+                            <td>18</td>
+
+                            <td>
+                                <span class="badge green">
+                                    3
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            © 2026 StarWave Audition. Admin Panel.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Audition Details | StarWave Admin</title>
+
+    <link rel="stylesheet"
+          href="../assets/css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            STARWAVE
+        </div>
+
+        <div class="sidebar-title">
+            Administration
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="applicants.html">
+                Applicants
+            </a>
+
+            <a href="auditions.html" class="active">
+                Auditions
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="agencies.html">
+                Agencies
+            </a>
+
+            <a href="judges.html">
+                Judges
+            </a>
+
+            <a href="submissions.html">
+                Submissions
+            </a>
+
+            <a href="results.html">
+                Results
+            </a>
+
+            <a href="reports.html">
+                Reports
+            </a>
+
+            <a href="messages.html">
+                Messages
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-title">
+            Account
+        </div>
+
+        <a href="#" onclick="logout()">
+            Logout
+        </a>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <a
+            href="auditions.html"
+            class="back"
+        >
+            ← Back to Auditions
+        </a>
+
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+                    Audition Details
+                </h1>
+
+                <p>
+                    Create or edit an audition.
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary"
+                onclick="saveAudition()"
+            >
+                Save Audition
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Audition Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="auditionTitle"
+                        value="2026 Global Audition"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Status
+                    </label>
+
+                    <select>
+
+                        <option>
+                            Open
+                        </option>
+
+                        <option>
+                            Closed
+                        </option>
+
+                        <option>
+                            Draft
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Start Date
+                    </label>
+
+                    <input
+                        type="date"
+                        value="2026-09-01"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Deadline
+                    </label>
+
+                    <input
+                        type="date"
+                        value="2026-11-30"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Agency
+                    </label>
+
+                    <select>
+
+                        <option>
+                            StarWave Entertainment
+                        </option>
+
+                        <option>
+                            Nova Music
+                        </option>
+
+                        <option>
+                            Orbit Entertainment
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select>
+
+                        <option>
+                            Vocal
+                        </option>
+
+                        <option>
+                            Dance
+                        </option>
+
+                        <option>
+                            Rap
+                        </option>
+
+                        <option>
+                            Model
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Description
+                    </label>
+
+                    <textarea>Show your talent and take your first step toward becoming a K-pop artist.</textarea>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Requirements
+                    </label>
+
+                    <textarea>Age 14–30. Submit one performance video. Original content preferred.</textarea>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <footer>
+            © 2026 StarWave Audition · Admin Panel
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="../assets/js/admin.js"></script>
+
+<script>
+
+function saveAudition() {
+
+    const title =
+        document.getElementById("auditionTitle").value;
+
+    if (title.trim() === "") {
+
+        alert("Please enter an audition title.");
+
+        return;
+
+    }
+
+    alert("Audition saved successfully in frontend demo.");
+
+}
+
+</script>
+
+</body>
+
+</html>

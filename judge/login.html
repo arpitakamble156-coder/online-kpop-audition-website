@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Judge Login | StarWave Audition</title>
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/judge.css"
+    >
+
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <div class="auth-box">
+
+        <div class="auth-logo">
+            StarWave
+        </div>
+
+        <h1>Judge Login</h1>
+
+        <p class="auth-subtitle">
+            Login to review and evaluate audition applicants.
+        </p>
+
+
+        <form onsubmit="judgeLogin(event)">
+
+            <div class="form-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary full-btn"
+            >
+                Login
+            </button>
+
+        </form>
+
+
+        <a
+            href="../index.html"
+            class="back-home"
+        >
+            ← Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+
+<script src="../assets/js/judge.js"></script>
+
+
+<script>
+
+function judgeLogin(event) {
+
+    event.preventDefault();
+
+    alert("Judge login successful!");
+
+    window.location.href =
+        "dashboard.html";
+
+}
+
+</script>
+
+</body>
+</html>
