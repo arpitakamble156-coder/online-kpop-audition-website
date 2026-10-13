@@ -163,13 +163,13 @@ select {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: #9333ea;
     color: #ffffff;
     border-color: #6b5a78;
 }
 
 .btn-secondary:hover {
-    background: #1b1424;
+    background: #9333ea;
     border-color: #a855f7;
     color: #c084fc;
 }
@@ -1484,3 +1484,29 @@ footer {
     margin: 0;
 }
 
+/* Fix last audition card button */
+.audition-card:last-child .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    min-height: 48px;
+}
+
+.auditions-list .audition-card:nth-child(3) .btn,
+.card-grid .audition-card:nth-child(3) .btn {
+    margin-top: 0;
+}
+
+.audition-card:nth-child(3) .btn {
+    background: #7c3aed;
+    color: #ffffff;
+    border: 1px solid #7c3aed;
+}
+
+/* Make the third audition button match the others */
+.audition-card:nth-child(3) .btn {
+    background: #7c3aed;
+    color: #ffffff;
+    border: 1px solid #7c3aed;
+}
