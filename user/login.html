@@ -1,13 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Login | StarWave Audition</title>
 
-    <link rel="stylesheet" href="../assets/css/user.css">
-    <script src="../assets/js/user-auth-api.js"></script>
+    <link rel="stylesheet"
+          href="../assets/css/user.css">
+
+    <script src="../assets/js/user-auth-api.js"
+            defer></script>
 </head>
 
 <body>
@@ -23,11 +30,14 @@
         <h1>Welcome Back</h1>
 
         <p class="auth-subtitle">
-            Login to continue your K-pop audition journey.
+            Login to continue your
+            K-pop audition journey.
         </p>
 
 
         <form onsubmit="loginUser(event)">
+
+            <!-- EMAIL -->
 
             <div class="form-group">
 
@@ -39,11 +49,13 @@
                     type="email"
                     id="email"
                     placeholder="Enter your email"
-                    required
-                >
+                    autocomplete="email"
+                    required>
 
             </div>
 
+
+            <!-- PASSWORD -->
 
             <div class="form-group">
 
@@ -55,19 +67,20 @@
                     type="password"
                     id="password"
                     placeholder="Enter your password"
-                    required
-                >
+                    autocomplete="current-password"
+                    required>
 
             </div>
 
+
+            <!-- SHOW PASSWORD -->
 
             <div class="checkbox-group">
 
                 <input
                     type="checkbox"
                     id="showPassword"
-                    onchange="togglePassword('password', this)"
-                >
+                    onchange="togglePassword('password', this)">
 
                 <label for="showPassword">
                     Show Password
@@ -76,11 +89,14 @@
             </div>
 
 
+            <!-- LOGIN BUTTON -->
+
             <button
                 type="submit"
-                class="btn btn-primary full-btn"
-            >
+                class="btn btn-primary full-btn">
+
                 Login
+
             </button>
 
         </form>
@@ -97,56 +113,16 @@
         </p>
 
 
-        <a
-            href="../index.html"
-            class="back-home"
-        >
+        <a href="../index.html"
+           class="back-home">
+
             ← Back to Home
+
         </a>
 
     </div>
 
 </div>
-
-
-<script src="../assets/js/user.js"></script>
-
-
-<script>
-
-function loginUser(event) {
-
-    event.preventDefault();
-
-    const email =
-        document.getElementById("email").value;
-
-    const password =
-        document.getElementById("password").value;
-
-
-    if (email === "" || password === "") {
-
-        alert("Please enter your email and password.");
-
-        return;
-    }
-
-
-    /*
-       Frontend demo only.
-
-       Later, this login will connect
-       to your Node.js + PostgreSQL backend.
-    */
-
-    alert("Login successful!");
-
-    window.location.href = "dashboard.html";
-
-}
-
-</script>
 
 </body>
 </html>

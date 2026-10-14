@@ -1,13 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Create Account | StarWave Audition</title>
 
-    <link rel="stylesheet" href="../assets/css/user.css">
-    <script src="../assets/js/user-auth-api.js"></script>
+    <link rel="stylesheet"
+          href="../assets/css/user.css">
+
+    <script src="../assets/js/user-auth-api.js"
+            defer></script>
 </head>
 
 <body>
@@ -23,13 +30,14 @@
         <h1>Create Account</h1>
 
         <p class="auth-subtitle">
-            Join StarWave and start your K-pop audition journey.
+            Join StarWave and start your
+            K-pop audition journey.
         </p>
-
 
         <form onsubmit="registerUser(event)">
 
             <!-- FULL NAME -->
+
             <div class="form-group">
 
                 <label for="fullName">
@@ -40,12 +48,14 @@
                     type="text"
                     id="fullName"
                     placeholder="Enter your full name"
+                    autocomplete="name"
                     required>
 
             </div>
 
 
             <!-- EMAIL -->
+
             <div class="form-group">
 
                 <label for="email">
@@ -56,12 +66,14 @@
                     type="email"
                     id="email"
                     placeholder="Enter your email"
+                    autocomplete="email"
                     required>
 
             </div>
 
 
             <!-- USERNAME -->
+
             <div class="form-group">
 
                 <label for="username">
@@ -72,12 +84,14 @@
                     type="text"
                     id="username"
                     placeholder="Choose a username"
+                    autocomplete="username"
                     required>
 
             </div>
 
 
             <!-- PASSWORD -->
+
             <div class="form-group">
 
                 <label for="password">
@@ -88,12 +102,15 @@
                     type="password"
                     id="password"
                     placeholder="Create a password"
+                    autocomplete="new-password"
+                    minlength="6"
                     required>
 
             </div>
 
 
             <!-- CONFIRM PASSWORD -->
+
             <div class="form-group">
 
                 <label for="confirmPassword">
@@ -104,12 +121,15 @@
                     type="password"
                     id="confirmPassword"
                     placeholder="Confirm your password"
+                    autocomplete="new-password"
+                    minlength="6"
                     required>
 
             </div>
 
 
             <!-- DATE OF BIRTH -->
+
             <div class="form-group">
 
                 <label for="dob">
@@ -125,6 +145,7 @@
 
 
             <!-- TERMS -->
+
             <div class="checkbox-group">
 
                 <input
@@ -133,7 +154,8 @@
                     required>
 
                 <label for="terms">
-                    I agree to the Terms & Conditions and Privacy Policy.
+                    I agree to the Terms & Conditions
+                    and Privacy Policy.
                 </label>
 
             </div>
@@ -163,46 +185,16 @@
         </p>
 
 
-        <a href="../index.html" class="back-home">
+        <a href="../index.html"
+           class="back-home">
+
             ← Back to Home
+
         </a>
 
     </div>
 
 </div>
-
-
-<script src="../assets/js/user.js"></script>
-
-<script>
-
-function registerUser(event) {
-
-    event.preventDefault();
-
-    const password =
-        document.getElementById("password").value;
-
-    const confirmPassword =
-        document.getElementById("confirmPassword").value;
-
-
-    if (password !== confirmPassword) {
-
-        alert("Passwords do not match.");
-
-        return;
-
-    }
-
-
-    alert("Account created successfully!");
-
-    window.location.href = "login.html";
-
-}
-
-</script>
 
 </body>
 </html>
