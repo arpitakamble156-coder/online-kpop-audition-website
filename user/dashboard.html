@@ -34,7 +34,9 @@
 
     <div class="container">
 
-        <h1 class="page-title">Welcome back, Ankita!</h1>
+        <h1 class="page-title" id="welcomeTitle">
+            Welcome back!
+        </h1>
 
         <p class="page-subtitle">
             Manage your auditions, applications and submissions.
@@ -153,6 +155,28 @@
 
 
 <script src="../assets/js/user.js"></script>
+
+<script src="../assets/js/user-auth-api.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const user = await checkUserSession();
+
+    if (!user) return;
+
+    document.getElementById("welcomeTitle").textContent =
+        `Welcome back, ${user.name}!`;
+
+    const avatar = document.querySelector(".user-avatar");
+
+    if (avatar) {
+        avatar.textContent =
+            user.name.charAt(0).toUpperCase();
+    }
+
+});
+</script>
 
 </body>
 </html>
